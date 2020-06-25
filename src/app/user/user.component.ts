@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../user';
+import { Repo } from '../repo';
 
 @Component({
   selector: 'app-user',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
+  user: User;
+  repo: Repo;
 
   constructor() { }
 
