@@ -27,20 +27,7 @@ export class UserComponent implements OnInit {
     );
     
     } 
-    searchRepo(searchedUser){
-      this.repoService.getUserRepos(searchedUser).then(
-        (result)=>{
-          this.repo = this.repoService.repositories
-          console.log(this.repo)
-        }
-      );
-      this.repo = this.repoService.repositories;
-      console.log(this.repo);
-    }
-    
-  resetSearch() {
-   
-  }
+ 
 
   ngOnInit() {
    //created instance of promise object that will be default, important it is in the lifehook

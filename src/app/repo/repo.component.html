@@ -10,14 +10,14 @@
 <div class="container allrepos" id="repositories">
   <div class="card" *ngFor="let repo of repo" style="width: 22rem;" class="repo">
     <div class="card-body" id="cardbody">
-      <h5 class="card-title" id={{i}} appHighlight><span class="top">Repo Name:</span> &nbsp;{{repo.name}} </h5>
+      <h5 class="card-title"  appHighlight><span class="top"></span> <b>{{repo.name}}</b>&nbsp; </h5>
       <div class="card-text">
         <hr>
         <div class="desc"><span class="top" appHighlight>Description: {{repo.description}} </span> &nbsp;
         </div>
         <hr>
         <div class="card-subtitle mb-2">
-            <span class="top"appHighlight>Language: {{repo.language}}</span> 
+            <span class="top"appHighlight>Languages: {{repo.language}}</span> 
         </div>
         <div class="card-subtitle mb-2"><span class="top" appHighlight>Created:&nbsp; <span id="created">{{repo.created_at|date}}</span></span>
         </div>
