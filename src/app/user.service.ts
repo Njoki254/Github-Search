@@ -20,7 +20,7 @@ export class UserService {
   
   
  
-
+//need to create a property http in constructor for request to work
 
   constructor(private http: HttpClient) {
     this.currentUser= new User("","","","","","",0,0,0,new Date)
@@ -28,7 +28,7 @@ export class UserService {
    }
 
    searchUser(searchedUser:string) {
-//interface is used to defined custom types in the searchUser function
+//interface is used to defined custom types that will be received in the searchUser function
     interface UserApiResponse {
       login: "";
       name: "";
@@ -43,6 +43,7 @@ export class UserService {
     }
      
    //use promises to access metadata from api external source
+   //api url is needed to make request to api with the function
     return new Promise(((resolve, reject) => {
       this.http.get<UserApiResponse>('https://api.github.com/users/' + searchedUser + '?access_token=' + environment.apiKey).toPromise().then(
         (result) => {
