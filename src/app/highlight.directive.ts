@@ -21,6 +21,6 @@ export class HighlightDirective {
     }
 
    }
-    
+    //highlight directive not working
 
 
