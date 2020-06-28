@@ -5,7 +5,8 @@ import { UserComponent } from './user/user.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SearchFormComponent } from './search-form/search-form.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-
+//routes tells views what to display
+//import all components, add paths to them in in const routes, and add router links in the html
 const routes: Routes = [
   {path:"profile", component: UserComponent},
   {path:"portfolio", component: RepoComponent},

@@ -43,7 +43,7 @@ export class UserComponent implements OnInit {
   }
 
   ngOnInit() {
-   
+   //created instance of promise object that will be default, important it is in the lifehook
  this.getProfileInfo('Njoki254');
 
   }
