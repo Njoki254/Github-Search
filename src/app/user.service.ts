@@ -1,3 +1,7 @@
+// Services are vital for accessing data from external sources
+//Below are key modules needed for the service to serve its purpose
+//imported user class so service could focus on responsibility rather than creating objects
+//dependency injections relives responsibility of creating dependencies, they are created using services 
 import { Injectable } from '@angular/core';
 import { HttpClient }    from '@angular/common/http';
 import { User } from './user';
@@ -5,6 +9,7 @@ import { environment } from 'src/environments/environment';
 import { CoreEnvironment } from '@angular/compiler/src/compiler_facade_interface';
 import { Resolve } from '@angular/router';
 
+//decorator accepts metadata for the class, 'root' means its injectable in the whole application
 @Injectable({
   providedIn: 'root'
 })
