@@ -9,8 +9,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
 //the Notfound component is a more formal way to infor user of an error
 //import all components, add paths to them in in const routes, and add router links in the html
 const routes: Routes = [
-  {path:"profile", component: UserComponent},
-  {path:"portfolio", component: RepoComponent},
+  {path:"user", component: UserComponent},
+  {path:'repository/:id', component: RepoComponent},
   {path:"navbar", component: NavbarComponent},
   {path:"searchForm", component: SearchFormComponent},
   {path:"**", component: NotFoundComponent},
@@ -18,7 +18,7 @@ const routes: Routes = [
 //important to add a redirect path in case of an empty path in the app., to avoid empty screens
   { path: '', redirectTo:"profile", pathMatch:"full"},
 ];
-
+//id token allows one to pass parameter for specific repo
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
