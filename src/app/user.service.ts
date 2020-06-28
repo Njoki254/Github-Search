@@ -27,7 +27,7 @@ export class UserService {
    }
 
    searchUser(searchedUser:string) {
-
+//interface is used to defined custom types in the searchUser function
     interface UserApiResponse {
       login: "";
       name: "";
@@ -41,7 +41,7 @@ export class UserService {
       created_at: Date;
     }
      
-   
+   //use promises to access metadata from api external source
     return new Promise(((resolve, reject) => {
       this.http.get<UserApiResponse>('https://api.github.com/users/' + searchedUser + '?access_token=' + environment.apiKey).toPromise().then(
         (result) => {
