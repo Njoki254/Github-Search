@@ -12,7 +12,7 @@ import { Repo } from '../repo';
 export class UserComponent implements OnInit {
   user: User;
   repo: Repo;
-
+//in the future, should be able to calculate the number of days since the account was created
   constructor(private userService: UserService, public repoService: RepoService) { }
 
   getProfileInfo(searchedUser) {
