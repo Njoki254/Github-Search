@@ -14,6 +14,8 @@ import { RepoService} from './repo.service';
 import { FormsModule }   from '@angular/forms';
 import { TimePassedPipe } from './time-passed.pipe';
 import { NavbarComponent } from './navbar/navbar.component';
+import { NgProgressModule } from '@ngx-progressbar/core';
+import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgProgressModule.forRoot(),
+    NgProgressHttpClientModule
   ],
   providers: [UserService, RepoService],
   bootstrap: [AppComponent]
