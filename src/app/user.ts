@@ -1,3 +1,4 @@
+//constructor for user mandatory properties available across all components with imports
 export class User {
     constructor(
       public login: string,
@@ -13,3 +14,4 @@ export class User {
     
     ){}
 }
+
