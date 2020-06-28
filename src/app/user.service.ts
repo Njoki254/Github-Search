@@ -44,6 +44,7 @@ export class UserService {
      
    //use promises to access metadata from api external source
    //api url is needed to make request to api with the function
+   //used enviroment file to hide api url
     return new Promise(((resolve, reject) => {
       this.http.get<UserApiResponse>('https://api.github.com/users/' + searchedUser + '?access_token=' + environment.apiKey).toPromise().then(
         (result) => {
