@@ -3,6 +3,7 @@
 //imported user class so service could focus on responsibility rather than creating objects
 //dependency injections relives responsibility of creating dependencies, they are created using services 
 import { Injectable } from '@angular/core';
+//import httpclient, to enable communication to remote servers and backend services
 import { HttpClient }    from '@angular/common/http';
 import { User } from './user';
 import { environment } from 'src/environments/environment';
