@@ -3,7 +3,7 @@ import { HttpClient }    from '@angular/common/http';
 import { User } from './user';
 import { environment } from 'src/environments/environment';
 import { CoreEnvironment } from '@angular/compiler/src/compiler_facade_interface';
-import { resolve } from 'dns';
+import { Resolve } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +17,7 @@ export class UserService {
 
 
   constructor(private http: HttpClient) {
-    this.currentUser= new User("","","","","","",0,0,0)
+    this.currentUser= new User("","","","","","",0,0,0,new Date)
     
    }
 
@@ -33,6 +33,7 @@ export class UserService {
       public_repos: number;
       following: number
       followers: number;
+      created_at: Date;
     }
      
    

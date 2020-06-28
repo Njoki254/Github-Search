@@ -12,6 +12,8 @@ import { HttpClientModule }    from '@angular/common/http';
 import { UserService} from './user.service';
 import { RepoService} from './repo.service';
 import { FormsModule }   from '@angular/forms';
+import { TimePassedPipe } from './time-passed.pipe';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -21,6 +23,8 @@ import { FormsModule }   from '@angular/forms';
     RepoComponent,
     SearchFormComponent,
     HighlightDirective,
+    TimePassedPipe,
+    NavbarComponent,
    
   ],
   imports: [

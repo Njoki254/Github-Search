@@ -1,1 +1,57 @@
-<p>user works!</p>
+
+        <!--Below is the function that acctually performs the search and brings new user-->
+        <div class="navbar">
+          <app-search-form (searchOutcome) = "getProfileInfo($event)"></app-search-form>
+        </div>
+        
+	<div class="container" *ngIf="user">
+
+
+		<div class="profile">
+
+			<div class="profile-image">
+
+				<img src="{{user.avatar_url}}" class="img-square img-responsive" alt="User Image">
+
+      </div>
+      <div class="container" id = "profile-info">
+        <div class="profile-user-settings">
+
+          <h2 class="profile-user-name"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{user.login}}</strong></h2>
+
+          <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{user.name}}</h2>
+
+          <button class="btn profile-settings-btn" aria-label="profile settings"><i class="fas fa-cog" aria-hidden="true"></i></button>
+
+        </div>
+
+        <div class="profile-stats">
+
+          <ul>
+            <li><span class="profile-stat-count"></span><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Repositories:</u>&nbsp; &nbsp;{{user.public_repos}}</strong></li>
+            <li><span class="profile-stat-count"></span><strong><u>Followers: </u>&nbsp; &nbsp; {{user.followers}}</strong> </li>
+            <li><span class="profile-stat-count"></span><strong><u>Following:</u>&nbsp; &nbsp; {{user.following}}</strong></li>
+          </ul>
+
+        </div>
+
+        <div class="profile-bio">
+
+                  <p><span class="profile-real-name"><strong></strong></span><strong>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Bio:</u></strong><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{user.bio}}</p>
+                  <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Joined Github  {{user.created_at|date|timePassed}} days ago</strong></p>
+                      
+
+        </div>
+
+    </div>
+      </div>
+
+            
+		<!-- End of profile section -->
+
+	</div>
+	<!-- End of container -->
+
+
+

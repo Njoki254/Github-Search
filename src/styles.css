@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Roboto+Slab:wght@800;900&display=swap");
+ *{
+     font-family: 'Roboto Slab', sans-serif;
+ }
+body{
+
+    background-color: #38cbb7;
+background-image: linear-gradient(0deg, #38cbb7 0%, #3ca8a5 13%, #3c97a4 30%, #44858e 46%, #010312 95%);
+
+
+    
+    background-repeat: no-repeat;
+    
+    color: white;
+    justify-items: center;
+}

@@ -1,1 +1,39 @@
-<p>repo works!</p>
+<app-search-form (searchOutcome)="searchRepo($event)"></app-search-form>
+  
+
+<div class="text-center repos" id="reps">
+    <h2 id="title">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 
+      &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+       &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<u>Repositories</u></h2>
+</div>
+<div class="container allrepos" id="repositories">
+  <div class="card" *ngFor="let repo of repo" style="width: 22rem;" class="repo">
+    <div class="card-body" id="cardbody">
+      <h5 class="card-title" appHighlight><span class="top">Repo Name:</span> &nbsp;{{repo.name}} </h5>
+      <div class="card-text">
+        <hr>
+        <div class="desc"><span class="top" appHighlight>Description: {{repo.description}} </span> &nbsp;
+        </div>
+        <hr>
+        <div class="card-subtitle mb-2">
+            <span class="top"appHighlight>Language: {{repo.language}}</span> 
+        </div>
+        <div class="card-subtitle mb-2"><span class="top" appHighlight>Created:&nbsp; <span id="created">{{repo.created_at|date}}</span></span>
+        </div>
+      </div>
+      </div>
+      <div class="card-footer">
+        <div class="btn-group" role="group" aria-label="Third group">
+         
+        </div>
+        <div class="btn-group" role="group" aria-label="Third group">
+          <button class="btn btn-sm btn-outline-danger"><i class="fa fa-code-fork" style="font-size:16px"></i> &nbsp;<span class="forks">{{repo.forks}}</span></button>
+        </div>
+        <div class="btn-group" role="group" aria-label="Third group">
+          <button class="btn btn-sm btn-success" id="visit"><a href="{{repo.html_url}}" class="card-link">VIEW &nbsp; <i class="fa fa-arrow-circle-right" style="font-size:16px"></i></a> </button> 
+        </div>
+      </div>
+  </div>
+</div>
+

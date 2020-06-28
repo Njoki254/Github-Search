@@ -9,12 +9,15 @@ export class SearchFormComponent implements OnInit {
 
   searchedUser: String;
 
-  @Output () searchOutput = new EventEmitter<any>();
+  //Below is the function that emits the new User searched
+  //Need to add function that suggests users for when searcher is typing
+
+  @Output () searchOutcome = new EventEmitter<any>();
 
   constructor() { }
 
   emitSearch(){
-    this.searchOutput.emit(this.searchedUser);
+    this.searchOutcome.emit(this.searchedUser);
     this.searchedUser = "";
   }
 
