@@ -1,5 +1,5 @@
 
-//apikey is stored hear to avoid risk of malicions attacks and interferance with code
+//apikey is stored here to avoid risk of malicions attacks and interferance with code
 export const environment = {
   production: false,
   apiKey:'a66eeb632cba0b0e3c0f4890e851996b98524200 ',

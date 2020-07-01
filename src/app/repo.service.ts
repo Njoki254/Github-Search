@@ -25,7 +25,8 @@ export class RepoService {
       forks: number;
     }
     return new Promise((resolve,reject)=>{
-      this.http.get<Repos>('https://api.github.com/users/'+searchedUser+"/repos?order=created&sort=asc?access_token="+ environment.apiKey).toPromise().then(
+      //the plus is concatenating
+      this.http.get<Repos>('https://api.github.com/users/'+searchedUser+"/repos?access_token="+ environment.apiKey).toPromise().then(
         (results) => {
           this.repositories = results;
           resolve();

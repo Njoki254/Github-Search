@@ -46,6 +46,7 @@ export class UserService {
    //api url is needed to make request to api with the function
    //used enviroment file to hide api url
    //promises represent completion or failure of asynchronous processes
+   //new creates instance of promise, resolve and reject are functions in themselves passed as arguments
     return new Promise(((resolve, reject) => {
       this.http.get<UserApiResponse>('https://api.github.com/users/' + searchedUser + '?access_token=' + environment.apiKey).toPromise().then(
         (result) => {
